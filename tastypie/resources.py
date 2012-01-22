@@ -346,7 +346,7 @@ class Resource(object):
         if format is None:
             format = request.META.get('CONTENT_TYPE', 'application/json')
         
-        if format == 'application/x-www-form-urlencoded':
+        if format.startswith('application/x-www-form-urlencoded'):
             deserialized = request.POST
         elif format.startswith('multipart'):
             deserialized = request.POST.copy()
