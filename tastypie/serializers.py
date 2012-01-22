@@ -65,6 +65,7 @@ class Serializer(object):
         * yaml
         * html
         * plist (see http://explorapp.com/biplist/)
+        * x-www-form-urlencoded
 
     It was designed to make changing behavior easy, either by overridding the
     various format methods (i.e. ``to_json``), by changing the
@@ -78,6 +79,7 @@ class Serializer(object):
         'yaml': 'text/yaml',
         'html': 'text/html',
         'plist': 'application/x-plist',
+        'www-form': 'application/x-www-form-urlencoded',
     }
 
     def __init__(self, formats=None, content_types=None, datetime_formatting=None):
